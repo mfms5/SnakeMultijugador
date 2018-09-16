@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Multiplayer Snake</title>
+<link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+
+    <div id="titulo">Multiplayer Snake</div>
+    <div id="esperando" style="text-align: center;">
+        Esperando a que lleguen más jugadores...
+    </div>
+    <div id="startBtn" style="text-align:center;">
+        <button type="button" onclick="startBtn()">Empezar partida</button>
+    </div>
+    <!--<button type="button" onclick="interrumpir()">Interrumpir Espera</button>-->
+    <div id="formulario">
+        <div id="nombreSala">
+            Nombre jugador: <input type="text" id="nombre">
+            Sala unirse/crear: <input type="text" id="sala">
+            <button type="button" onclick="clickJugar()">Jugar</button>
+        </div>
+        <br>
+        <br>
+        <div id="funcionamiento">
+            <b>FUNCIONAMIENTO: </b><br>
+            -Introduce tu nombre y el de la sala que quieres crear o a la que quieres unirte.<br>
+            -No podrás unirte a una sala que ya tenga 4 jugadores.<br>
+            -Los cuadrados amarillos equivalen a comida. Suman puntos y hacen a la serpiente más larga.<br>
+            -Si chocas con otra serpiente, perderás 3 puntos y recuperarás la longitud inicial. <br>
+            -Si te chocas 3 veces, tu serpiente morirá.<br>
+            -Si otra serpiente choca contra ti, sumarás 5 puntos.<br>
+            -La partida finaliza cuando solo queda una serpiente viva.<br>
+            -Gana el jugador que más puntos obtenga. <br>
+        </div>
+    </div>
+    <div id="hallFameContainer">
+            <div id="hallFame"></div>
+    </div>     
+    <div id="juego">
+	    <div style="float: left">
+		    <canvas id="playground" width="640" height="480"></canvas> <!--Cuadricula juego-->
+	    </div>
+	    <div id="console-container">
+		    <div id="console"></div> <!--Consola mensajes-->
+	    </div>
+       <div id="puntos-container">
+		    <div id="puntos"></div> <!--Panel de puntos-->
+	 </div>
+    </div>
+	<script src="app.js"></script>
+</body>
+</html>
